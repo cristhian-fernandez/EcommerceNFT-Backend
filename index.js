@@ -227,7 +227,7 @@ app.put("/profile/:token", updatedProfileById);
 //conext to db
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
-  console.log("listening for request on port", PORT);
+  console.log("listening for request on port::", PORT);
 });
 
 ////prueba tail
