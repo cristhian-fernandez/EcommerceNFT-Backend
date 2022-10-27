@@ -73,26 +73,23 @@ const getNftsComplete = async (req, res ) => {
 const getNftId = async (req, res) => {
     try {
         const {id, token_address} = req.query;
-        
-
-        if (token_address === '1'){
+        if (token_address == '1'){
             //buscar en db
-            const nftBd = await nftSchema.findById(id)
+            const nftBd = await nftSchema.findById(id);
             res.send(nftBd)
         }else {
             //buscar en api moralis
-            
             const options = {
                 address: token_address,
                 token_id: id,
                 chain: "eth",
             };
-            const option2 = {
-                address : token_address,
-                chain : 'eth'
-            }
+            // const option2 = {
+            //     address : token_address,
+            //     chain : 'eth'
+            // }
           const nft = await Moralis.Web3API.token.getTokenIdMetadata(options);
-          const priceNft = await Moralis.Web3API.token.getTokenPrice(options2)
+        //   const priceNft = await Moralis.Web3API.token.getTokenPrice(option2)
           const metadata = JSON.parse(nft.metadata);
           const respuesta = {
             token_address : nft.token_address,
@@ -105,7 +102,8 @@ const getNftId = async (req, res) => {
             image : metadata.image
 
           }
-            res.send(priceNft)
+            // res.send(priceNft)
+            res.send(respuesta)
         }
 
     
