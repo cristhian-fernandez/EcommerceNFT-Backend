@@ -2,11 +2,14 @@ const Moralis = require("moralis/node");
 const { stringify } = require("uuid");
 const nftSchema = require('../models/Nft.js')
 const mongoose = require('mongoose')
-const serverUrl = "https://hzgmh0bhktiz.usemoralis.com:2053/server";
-const appId = "TvlbElMKEQ3ozadXOqUAthnvVYSIKgNIIrllWHBi";
-const masterKey = "bJ7z3DlllOjtYp1fRdf4ITSOXh6ewwvZEyR1nOQB";
-Moralis.start({ serverUrl, appId, masterKey });
+// const serverUrl = "https://hzgmh0bhktiz.usemoralis.com:2053/server";
+// const appId = "TvlbElMKEQ3ozadXOqUAthnvVYSIKgNIIrllWHBi";
+// const masterKey = "bJ7z3DlllOjtYp1fRdf4ITSOXh6ewwvZEyR1nOQB";
+const serverUrl = "https://krhi8yhqfyrf.usemoralis.com:2053/server";
+const appId = "5dEYZsSP8OvJQZNBofJT76I7kEyR9KbTdOVwY1Me";
+const masterKey = "DxqbVgBPEhBNXv437WxEjiVMD8pLRBsvMwxxwcGJ";
 
+Moralis.start({ serverUrl, appId, masterKey });
 
 const getNftsComplete = async (req, res ) => {
     try {
@@ -25,6 +28,7 @@ const getNftsComplete = async (req, res ) => {
                 cursor : NFTs.cursor,
                 totalItems : NFTs.total
             })
+            // console.log('resultados:::',NFTs.result);
             console.log(
                 `Got page ${NFTs.page} of ${Math.ceil(
                   NFTs.total / NFTs.page_size

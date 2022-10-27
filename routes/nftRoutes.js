@@ -7,9 +7,13 @@ const Moralis = require("moralis/node");
 const { getAllNft, getNameNft, getIdNft } = require("../controllers/nftGetController");
 const {getNftsComplete, getNftId, getOneCollection, getNFTPrice} = require('../controllers/pruebaController')
 const {getNFTCollection} = require('../controllers/collectionsController')
-const serverUrl = "https://hzgmh0bhktiz.usemoralis.com:2053/server";
-const appId = "TvlbElMKEQ3ozadXOqUAthnvVYSIKgNIIrllWHBi";
-const masterKey = "bJ7z3DlllOjtYp1fRdf4ITSOXh6ewwvZEyR1nOQB";
+// const serverUrl = "https://hzgmh0bhktiz.usemoralis.com:2053/server";
+// const appId = "TvlbElMKEQ3ozadXOqUAthnvVYSIKgNIIrllWHBi";
+// const masterKey = "bJ7z3DlllOjtYp1fRdf4ITSOXh6ewwvZEyR1nOQB";
+
+const serverUrl = "https://krhi8yhqfyrf.usemoralis.com:2053/server";
+const appId = "5dEYZsSP8OvJQZNBofJT76I7kEyR9KbTdOVwY1Me";
+const masterKey = "DxqbVgBPEhBNXv437WxEjiVMD8pLRBsvMwxxwcGJ";
 Moralis.start({ serverUrl, appId, masterKey });
 
 const createNft = require("../controllers/nftPostController");

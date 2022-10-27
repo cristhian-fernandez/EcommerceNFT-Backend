@@ -1,13 +1,17 @@
 // const { all } = require("../routes/nftRoutes");
 const Moralis = require("moralis/node");
 const { stringify } = require("uuid");
-const serverUrl = "https://hzgmh0bhktiz.usemoralis.com:2053/server";
-const appId = "TvlbElMKEQ3ozadXOqUAthnvVYSIKgNIIrllWHBi";
-const masterKey = "bJ7z3DlllOjtYp1fRdf4ITSOXh6ewwvZEyR1nOQB";
+const serverUrl = "https://krhi8yhqfyrf.usemoralis.com:2053/server";
+// const serverUrl = "https://hzgmh0bhktiz.usemoralis.com:2053/server";
+const appId = "5dEYZsSP8OvJQZNBofJT76I7kEyR9KbTdOVwY1Me";
+// const appId = "TvlbElMKEQ3ozadXOqUAthnvVYSIKgNIIrllWHBi";
+const masterKey = "DxqbVgBPEhBNXv437WxEjiVMD8pLRBsvMwxxwcGJ";
+// const masterKey = "bJ7z3DlllOjtYp1fRdf4ITSOXh6ewwvZEyR1nOQB";
 const nftSchema = require("../models/Nft.js");
 const mongoose = require("mongoose");
-Moralis.start({ serverUrl, appId, masterKey });
 
+Moralis.start({ serverUrl, appId, masterKey });
+// console.log('nftGetController:::');
 //filtrar los nfts que no tengan imagen quye no paarecescan ni gif
 // que no se repita la imagen, como hacer que no se repita los elementros de un array
 
